@@ -1,0 +1,5 @@
+discord.py>=2.3.0
+requests
+python-dotenv
+
+Note: You will need to run pip-install -r requirement .txt in your terminal to install them

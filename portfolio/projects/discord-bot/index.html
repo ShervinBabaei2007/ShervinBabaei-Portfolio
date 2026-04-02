@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discord AI Bridge - SHB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg: #0f0e0d;
+        --bg-2: #171614;
+        --border: #2e2b26;
+        --text: #e8e2d9;
+        --muted: #857e74;
+        --accent: #d4a853;
+        --tag-bg: #1c1a17;
+        --tag-text: #c8a96e;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "DM Sans", sans-serif;
+        font-weight: 300;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* NAV */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.4rem 3rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-back {
+        font-family: "DM Mono", monospace;
+        font-size: 0.75rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .nav-back::before {
+        content: "← ";
+      }
+      .nav-back:hover {
+        color: var(--text);
+      }
+
+      .nav-logo {
+        font-family: "DM Mono", monospace;
+        font-size: 0.85rem;
+        letter-spacing: 0.15em;
+        color: var(--accent);
+      }
+
+      /* HERO */
+      .hero {
+        padding: 5rem 3rem 4rem;
+        border-bottom: 1px solid var(--border);
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .hero-label {
+        font-family: "DM Mono", monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-title em {
+        font-style: italic;
+        font-weight: 400;
+        color: var(--accent);
+      }
+
+      .hero-desc {
+        font-size: 1rem;
+        color: var(--muted);
+        line-height: 1.75;
+        max-width: 580px;
+        margin-bottom: 2.5rem;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .tag {
+        font-family: "DM Mono", monospace;
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        color: var(--tag-text);
+        background: var(--tag-bg);
+        border: 1px solid var(--border);
+        padding: 0.3rem 0.75rem;
+      }
+
+      .btn-github {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-family: "DM Mono", monospace;
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--bg);
+        background: var(--accent);
+        padding: 0.9rem 2rem;
+        text-decoration: none;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+      }
+      .btn-github:hover {
+        background: #e0b660;
+        transform: translateY(-2px);
+      }
+      .btn-github svg {
+        width: 16px;
+        height: 16px;
+        fill: var(--bg);
+      }
+
+      /* DETAILS */
+      .details {
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 4rem 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .detail-block h3 {
+        font-family: "DM Mono", monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 1rem;
+      }
+
+      .detail-block p,
+      .detail-block li {
+        font-size: 0.92rem;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .detail-block ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .detail-block ul li::before {
+        content: "- ";
+        color: var(--accent);
+        opacity: 0.6;
+      }
+
+      /* HOW IT WORKS */
+      .flow {
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 4rem 3rem;
+      }
+
+      .flow h2 {
+        font-family: "DM Mono", monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 2rem;
+      }
+
+      .flow-steps {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        flex-wrap: wrap;
+      }
+
+      .flow-step {
+        background: var(--bg-2);
+        border: 1px solid var(--border);
+        padding: 1.2rem 1.5rem;
+        flex: 1;
+        min-width: 140px;
+      }
+
+      .flow-step-num {
+        font-family: "DM Mono", monospace;
+        font-size: 0.6rem;
+        color: var(--accent);
+        opacity: 0.6;
+        letter-spacing: 0.12em;
+        margin-bottom: 0.4rem;
+      }
+
+      .flow-step-label {
+        font-size: 0.88rem;
+        color: var(--text);
+        font-weight: 400;
+      }
+
+      .flow-arrow {
+        font-family: "DM Mono", monospace;
+        color: var(--accent);
+        opacity: 0.4;
+        padding: 0 0.5rem;
+        font-size: 1rem;
+      }
+
+      /* FOOTER */
+      footer {
+        margin-top: auto;
+        padding: 1.5rem 3rem;
+        border-top: 1px solid var(--border);
+        font-family: "DM Mono", monospace;
+        font-size: 0.7rem;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      @media (max-width: 700px) {
+        nav,
+        .hero,
+        .details,
+        .flow,
+        footer {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+        .details {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+        .flow-steps {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .flow-arrow {
+          transform: rotate(90deg);
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="../../index.html" class="nav-back">Portfolio</a>
+      <span class="nav-logo">SHB</span>
+    </nav>
+
+    <section class="hero">
+      <p class="hero-label">Project - Python / discord.py</p>
+      <h1 class="hero-title">Discord<br /><em>AI Bridge</em></h1>
+      <p class="hero-desc">
+        A Discord bot that bridges messages from a server directly to a locally hosted large
+        language model via LM Studio. Messages are sent to a Qwen model running on a local API
+        endpoint, and the bot replies in real time - no cloud API required.
+      </p>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">discord.py</span>
+        <span class="tag">LM Studio</span>
+        <span class="tag">Qwen</span>
+        <span class="tag">python-dotenv</span>
+        <span class="tag">Local LLM</span>
+      </div>
+      <a
+        href="https://github.com/ShervinBabaei2007/Discord-ai-bridge"
+        target="_blank"
+        class="btn-github"
+      >
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577
+        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755
+        -1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07
+        1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332
+        -5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005
+        -.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552
+        3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0
+        4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015
+        3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"
+          />
+        </svg>
+        View on GitHub
+      </a>
+    </section>
+
+    <section class="details">
+      <div class="detail-block">
+        <h3>What it does</h3>
+        <ul>
+          <li>Listens for messages in a Discord server</li>
+          <li>Forwards them to a locally running LLM via HTTP</li>
+          <li>Returns the model's response back to the channel</li>
+          <li>Runs fully offline - no external AI API needed</li>
+        </ul>
+      </div>
+      <div class="detail-block">
+        <h3>Stack</h3>
+        <ul>
+          <li>Python 3 with discord.py</li>
+          <li>LM Studio local API (OpenAI-compatible)</li>
+          <li>Qwen language model</li>
+          <li>python-dotenv for config</li>
+          <li>requests for HTTP calls</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="flow">
+      <h2>How it works</h2>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="flow-step-num">01</div>
+          <div class="flow-step-label">User sends message in Discord</div>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <div class="flow-step-num">02</div>
+          <div class="flow-step-label">Bot picks it up via discord.py event</div>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <div class="flow-step-num">03</div>
+          <div class="flow-step-label">POST request to LM Studio on localhost:1234</div>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-step">
+          <div class="flow-step-num">04</div>
+          <div class="flow-step-label">Qwen model responds, bot sends reply</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>SHB - Portfolio</span>
+      <span>Discord AI Bridge</span>
+    </footer>
+  </body>
+</html>
