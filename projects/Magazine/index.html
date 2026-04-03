@@ -310,17 +310,66 @@
         justify-content: space-between;
       }
 
+      .highlight {
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 4rem 3rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .highlight h2 {
+        font-family: "DM Mono", monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 2rem;
+      }
+      .highlight-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      .highlight-card {
+        background: var(--bg-2);
+        border: 1px solid var(--border);
+        padding: 1.5rem;
+        position: relative;
+      }
+      .highlight-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(to right, var(--accent), transparent);
+      }
+      .highlight-card h4 {
+        font-family: "DM Mono", monospace;
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        color: var(--text);
+        margin-bottom: 0.6rem;
+      }
+      .highlight-card p {
+        font-size: 0.85rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
       @media (max-width: 700px) {
         nav,
         .hero,
         .details,
-        .modes,
+        .highlight,
         footer {
           padding-left: 1.5rem;
           padding-right: 1.5rem;
         }
 
         .details,
+        .highlight-grid,
         .modes-grid {
           grid-template-columns: 1fr;
           gap: 2rem;
@@ -339,7 +388,7 @@
         <p class="hero-label">Project - HTML, CSS and JavaScript</p>
       </div>
       <h1 class="hero-title">
-        News<em><br /></em>Magazine
+        News<em><br />Magazine</em>
       </h1>
       <p class="hero-desc">
         A news magazine website built with HTML, CSS, and JavaScript. It showcases articles on
@@ -395,6 +444,40 @@
           <li>CSS3</li>
           <li>JavaScript</li>
         </ul>
+      </div>
+    </section>
+
+    <section class="highlight">
+      <h2>Technical Highlights</h2>
+      <div class="highlight-grid">
+        <div class="highlight-card">
+          <h4>Theme Persistence via localStorage</h4>
+          <p>
+            A dark/light theme toggle saves the user's preference to localStorage, restoring their
+            chosen theme on every return visit without any backend.
+          </p>
+        </div>
+        <div class="highlight-card">
+          <h4>Responsive Table-to-Card Layout</h4>
+          <p>
+            The sources page transforms from a data table on desktop into stacked cards on mobile
+            using a CSS-only media query - no JavaScript required.
+          </p>
+        </div>
+        <div class="highlight-card">
+          <h4>Sticky Header</h4>
+          <p>
+            The header locks to the top of the viewport on desktop via position sticky, keeping
+            navigation always accessible while scrolling through articles.
+          </p>
+        </div>
+        <div class="highlight-card">
+          <h4>Zero Dependencies</h4>
+          <p>
+            Built entirely with vanilla HTML, CSS, and JavaScript — no libraries, frameworks, or
+            build tools required.
+          </p>
+        </div>
       </div>
     </section>
 
