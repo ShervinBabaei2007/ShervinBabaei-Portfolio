@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Magazine - SHB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg: #0f0e0d;
+        --bg-2: #171614;
+        --border: #2e2b26;
+        --text: #e8e2d9;
+        --muted: #857e74;
+        --accent: #d4a853;
+        --tag-bg: #1c1a17;
+        --tag-text: #c8a96e;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "DM Sans", sans-serif;
+        font-weight: 300;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* NAV */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.4rem 3rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-back {
+        font-family: "DM Mono", monospace;
+        font-size: 0.75rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .nav-back::before {
+        content: "← ";
+      }
+
+      .nav-back:hover {
+        color: var(--text);
+      }
+
+      .nav-logo {
+        font-family: "DM Mono", monospace;
+        font-size: 0.85rem;
+        letter-spacing: 0.15em;
+        color: var(--accent);
+      }
+
+      /* HERO */
+      .hero {
+        padding: 5rem 3rem 4rem;
+        border-bottom: 1px solid var(--border);
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .hero-top {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-label {
+        font-family: "DM Mono", monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .badge {
+        font-family: "DM Mono", monospace;
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--bg);
+        background: var(--accent);
+        padding: 0.2rem 0.65rem;
+      }
+
+      .hero-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-title em {
+        font-style: italic;
+        font-weight: 400;
+        color: var(--accent);
+      }
+
+      .hero-desc {
+        font-size: 1rem;
+        color: var(--muted);
+        line-height: 1.75;
+        max-width: 580px;
+        margin-bottom: 2.5rem;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .tag {
+        font-family: "DM Mono", monospace;
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        color: var(--tag-text);
+        background: var(--tag-bg);
+        border: 1px solid var(--border);
+        padding: 0.3rem 0.75rem;
+      }
+
+      .btn-row {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-family: "DM Mono", monospace;
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 0.9rem 2rem;
+        transition:
+          transform 0.15s,
+          background 0.2s,
+          color 0.2s;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        color: var(--bg);
+        background: var(--accent);
+      }
+
+      .btn-primary:hover {
+        background: #e0b660;
+      }
+
+      .btn-secondary {
+        color: var(--accent);
+        background: transparent;
+        border: 1px solid var(--accent);
+      }
+
+      .btn-secondary:hover {
+        background: rgba(212, 168, 83, 0.08);
+      }
+
+      .btn svg {
+        width: 15px;
+        height: 15px;
+        fill: currentColor;
+        flex-shrink: 0;
+      }
+
+      /* DETAILS */
+      .details {
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 4rem 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .detail-block h3 {
+        font-family: "DM Mono", monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 1rem;
+      }
+
+      .detail-block p,
+      .detail-block li {
+        font-size: 0.92rem;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .detail-block ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .detail-block ul li::before {
+        content: "- ";
+        color: var(--accent);
+        opacity: 0.6;
+      }
+
+      /* USAGE MODES */
+      .modes {
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 4rem 3rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .modes h2 {
+        font-family: "DM Mono", monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 2rem;
+      }
+
+      .modes-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+
+      .mode-card {
+        background: var(--bg-2);
+        border: 1px solid var(--border);
+        padding: 2rem;
+      }
+
+      .mode-card h4 {
+        font-family: "DM Mono", monospace;
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+        color: var(--text);
+        margin-bottom: 1rem;
+      }
+
+      .mode-card p {
+        font-size: 0.88rem;
+        color: var(--muted);
+        line-height: 1.65;
+        margin-bottom: 1.2rem;
+      }
+
+      .code-block {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        padding: 0.8rem 1rem;
+        font-family: "DM Mono", monospace;
+        font-size: 0.75rem;
+        color: var(--accent);
+        letter-spacing: 0.05em;
+        line-height: 1.8;
+      }
+
+      /* FOOTER */
+      footer {
+        margin-top: auto;
+        padding: 1.5rem 3rem;
+        border-top: 1px solid var(--border);
+        font-family: "DM Mono", monospace;
+        font-size: 0.7rem;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      @media (max-width: 700px) {
+        nav,
+        .hero,
+        .details,
+        .modes,
+        footer {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+
+        .details,
+        .modes-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="https://shervinbabaei2007.github.io/Portfolio/" class="nav-back">Portfolio</a>
+      <span class="nav-logo">SHB</span>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-top">
+        <p class="hero-label">Project - HTML, CSS and JavaScript</p>
+      </div>
+      <h1 class="hero-title">
+        News<em><br /></em>Magazine
+      </h1>
+      <p class="hero-desc">
+        A news magazine website built with HTML, CSS, and JavaScript. It showcases articles on
+        football news, player profiles, match analysis, and more. The site is designed to be
+        responsive and accessible across various devices.
+      </p>
+      <div class="tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+      </div>
+      <div class="btn-row">
+        <a
+          href="https://shervinbabaei2007.github.io/News-Magazine/"
+          target="_blank"
+          class="btn btn-primary"
+        >
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42L17.59 5H14V3zm-1 2H5a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2v-8h-2v8H5V7h8V5z"
+            />
+          </svg>
+          Live Demo
+        </a>
+        <a
+          href="https://github.com/ShervinBabaei2007/News-Magazine"
+          target="_blank"
+          class="btn btn-secondary"
+        >
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04 .138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36 .81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"
+            />
+          </svg>
+          View on GitHub
+        </a>
+      </div>
+    </section>
+
+    <section class="details">
+      <div class="detail-block">
+        <h3>What it does</h3>
+        <ul>
+          <li>Displays football news articles</li>
+          <li>Showcases player profiles and match analysis</li>
+          <li>Provides a responsive design for various devices</li>
+        </ul>
+      </div>
+      <div class="detail-block">
+        <h3>Stack</h3>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="modes">
+      <h2>How to use it</h2>
+      <div class="modes-grid">
+        <div class="mode-card">
+          <h4>Web App - Browser</h4>
+          <p>
+            Simply visit the live demo link and explore the football news, player profiles, and
+            match analysis. The site is designed for a seamless user experience on any device.
+          </p>
+          <div class="code-block">
+            Visit:
+            <a href="https://shervinbabaei2007.github.io/News-Magazine/"
+              >https://shervinbabaei2007.github.io/News-Magazine/</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      SHB - Portfolio
+      <span>News Magazine</span>
+    </footer>
+  </body>
+</html>
