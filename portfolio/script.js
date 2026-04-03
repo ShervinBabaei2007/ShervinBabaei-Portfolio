@@ -35,6 +35,12 @@ const projects = [
     desc: "A Discord bot that connects to a locally hosted LLM via LM Studio. Responds to messages in real time using a Qwen model served on a local API endpoint.",
     tags: ["Python", "discord.py", "LM Studio", "LLM"],
   },
+  {
+    name: "Jiki",
+    folder: "jiki",
+    desc: "A mini Wikipedia-style web app built with Node.js and Express. Features auto-linkification between articles, EJS-rendered pages, and a flat-file data store.",
+    tags: ["Node.js", "Express", "EJS", "JavaScript"],
+  },
 ];
 
 // =====================
