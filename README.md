@@ -8,7 +8,7 @@ I’m a full stack developer who enjoys building systems that actually hold up b
 
 At BCIT, I’ve been developing applications using React, Node.js, and both SQL and NoSQL databases, while paying close attention to performance, structure, and maintainability. I’ve worked on projects involving authentication flows, API design, and even integrating local AI models into real-time environments like Discord.
 
-I tend to approach projects from a systems perspective—thinking about how pieces interact, where things can break, and how to keep the experience smooth for users. I value clear structure, efficient code, and building things that are simple, but not simplistic.
+I tend to approach projects from a systems perspective-thinking about how pieces interact, where things can break, and how to keep the experience smooth for users. I value clear structure, efficient code, and building things that are simple, but not simplistic.
 
 Currently focused on building more complex full-stack systems and exploring performance, scalability, and real-world application design.
 
