@@ -4,7 +4,7 @@ Personal portfolio site showcasing my projects as a Full Stack Web Development s
 
 ## About Me
 
-I’m a full stack developer who enjoys building systems that actually hold up beyond the demo stage. Most of my work focuses on connecting clean frontends with practical backend logic—handling real data, managing edge cases, and keeping things fast and reliable.
+I’m a full stack developer who enjoys building systems that actually hold up beyond the demo stage. Most of my work focuses on connecting clean frontends with practical backend logic-handling real data, managing edge cases, and keeping things fast and reliable.
 
 At BCIT, I’ve been developing applications using React, Node.js, and both SQL and NoSQL databases, while paying close attention to performance, structure, and maintainability. I’ve worked on projects involving authentication flows, API design, and even integrating local AI models into real-time environments like Discord.
 
