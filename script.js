@@ -41,6 +41,12 @@ const projects = [
     desc: "A mini Wikipedia-style web app built with Node.js and Express. Features auto-linkification between articles, EJS-rendered pages, and a flat-file data store.",
     tags: ["Node.js", "Express", "EJS", "JavaScript"],
   },
+  {
+    name: "News Magazine",
+    folder: "Magazine",
+    desc: "A web application, that was built with HTML, CSS and JavaScript, for browsing football articles",
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
 ];
 
 // =====================
