@@ -5,12 +5,12 @@ const projects = [
     desc: "A CLI tool and web app that auto-generates commit messages from git diffs using AI. Published to PyPI. Built at a hackathon — top 6 of 36 teams.",
     tags: ["React", "TypeScript", "Python", "Auth0", "PyPI"],
   },
-  {
-    name: "DevJokes",
-    folder: "devjokes",
-    desc: "Full-stack joke app with voting, author ownership, and protected delete. Built with TanStack Start, Drizzle ORM, Neon PostgreSQL, and Better Auth.",
-    tags: ["TanStack", "Drizzle ORM", "PostgreSQL", "Better Auth"],
-  },
+  // {
+  //   name: "DevJokes",
+  //   folder: "devjokes",
+  //   desc: "Full-stack joke app with voting, author ownership, and protected delete. Built with TanStack Start, Drizzle ORM, Neon PostgreSQL, and Better Auth.",
+  //   tags: ["TanStack", "Drizzle ORM", "PostgreSQL", "Better Auth"],
+  // },
   {
     name: "Jeddit",
     folder: "jeddit",
