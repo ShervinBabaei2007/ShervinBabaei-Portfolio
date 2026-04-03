@@ -106,8 +106,8 @@ a {
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: flex-end;
-  padding: 0 3rem 6rem;
+  align-items: center;
+  padding: 8rem 3rem 4rem;
   position: relative;
   overflow: hidden;
 }
@@ -121,19 +121,19 @@ a {
     linear-gradient(var(--border) 1px, transparent 1px),
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 60px 60px;
-  opacity: 0.35;
-  mask-image: radial-gradient(ellipse 80% 80% at 20% 60%, black 30%, transparent 100%);
+  opacity: 0.45; /* slightly more visible */
+  mask-image: radial-gradient(ellipse 100% 100% at 20% 50%, black 20%, transparent 100%);
 }
 
-/* Amber glow */
+/* Amber glow — bigger and brighter */
 .hero::after {
   content: "";
   position: absolute;
-  top: -10%;
-  left: -5%;
-  width: 50%;
-  height: 70%;
-  background: radial-gradient(ellipse, rgba(212, 168, 83, 0.07) 0%, transparent 70%);
+  top: -30%;
+  left: -15%;
+  width: 75%;
+  height: 110%;
+  background: radial-gradient(ellipse, rgba(212, 168, 83, 0.13) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -147,22 +147,35 @@ a {
 
 .hero-label {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   opacity: 0;
   animation: fadeUp 0.6s ease 0.2s forwards;
 }
 
+.hero-label::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.7;
+}
+
 .hero-name {
   font-family: var(--font-display);
-  font-size: clamp(4rem, 10vw, 9rem);
+  font-size: clamp(4.5rem, 11vw, 10rem);
   font-weight: 700;
-  line-height: 0.95;
+  line-height: 0.92;
   color: var(--text);
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
+  letter-spacing: -0.02em;
   opacity: 0;
   animation: fadeUp 0.7s ease 0.35s forwards;
 }
@@ -171,13 +184,16 @@ a {
   font-style: italic;
   font-weight: 400;
   color: var(--accent);
+  display: block;
 }
 
 .hero-sub {
-  font-size: 1rem;
-  color: var(--text);
-  font-weight: 300;
-  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-bottom: 3rem;
+  max-width: 440px;
+  letter-spacing: 0.01em;
   opacity: 0;
   animation: fadeUp 0.7s ease 0.5s forwards;
 }
@@ -185,7 +201,8 @@ a {
 .hero-deco {
   position: absolute;
   right: 3rem;
-  bottom: 6rem;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -196,9 +213,9 @@ a {
 
 .deco-num {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--text-muted);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
   writing-mode: vertical-rl;
 }
 
