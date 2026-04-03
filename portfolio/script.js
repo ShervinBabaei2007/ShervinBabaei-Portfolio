@@ -24,10 +24,10 @@ const projects = [
     tags: ["HTML", "CSS", "JavaScript", "localStorage"],
   },
   {
-    name: "Notes App",
+    name: "ThinkBoard",
     folder: "notes-app",
-    desc: "A full-stack notes application with a React frontend and Node.js/Express backend. Features CRUD operations and clean component architecture.",
-    tags: ["React", "Node.js", "Express", "REST API"],
+    desc: "A full-stack MERN notes app with a React frontend and Express/MongoDB backend. Features full CRUD, REST API, and a clean component-based architecture.",
+    tags: ["MongoDB", "Express", "React", "Node.js"],
   },
   {
     name: "LLM Discord Bot",
