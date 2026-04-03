@@ -447,7 +447,7 @@ a {
 }
 
 .project-link:hover {
-  gap: 0.9rem;
+  gap: 1.4rem;
 }
 
 .project-link::after {
