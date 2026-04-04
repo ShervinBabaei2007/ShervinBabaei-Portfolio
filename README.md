@@ -25,7 +25,7 @@ I am a Full-Stack student at BCIT driven by a "systems-first" mindset and an obs
 ---
 
 ## 🔗 Quick Links
-[**Live Portfolio**](https://shervinbabaei2007.github.io/ShervinBabaei-Portfolio/)
+[**Live Portfolio**](https://shervin-babaei.vercel.app/)
 
 ## 📫 Let's Connect
 [**LinkedIn**](https://www.linkedin.com/in/shervin-babaei-5a326a388/)
