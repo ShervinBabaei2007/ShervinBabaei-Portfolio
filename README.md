@@ -22,5 +22,10 @@ I am a Full-Stack student at BCIT driven by a "systems-first" mindset and an obs
 | **Integrations** | Discord.py, REST APIs, Auth0, LM Studio |
 | **Environment** | Windows 11 Pro | VS Code | Fira Code |
 
+---
+
+## 🔗 Quick Links
+[**Live Portfolio**](https://shervinbabaei2007.github.io/ShervinBabaei-Portfolio/)
+
 ## 📫 Let's Connect
 [**LinkedIn**](https://www.linkedin.com/in/shervin-babaei-5a326a388/)
