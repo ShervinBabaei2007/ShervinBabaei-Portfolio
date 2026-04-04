@@ -1,20 +1,26 @@
-# Shervin Babaei Portfolio
+# 🚀 Shervin Babaei
+**Full-Stack Developer | AI & Cybersecurity Aspirant | Systems Optimizer**
 
-Personal portfolio site showcasing my projects as a Full Stack Web Development student at BCIT.
+I am a Full-Stack student at BCIT driven by a "systems-first" mindset and an obsession with the low-level mechanics that power modern technology. I don’t just want to build interfaces; I want to understand the "how" behind the stack-from the internal logic of Large Language Models to hardening systems against real-world attacks. My ultimate goal is to bridge the gap between high-performance AI and Cybersecurity, ensuring every application is optimized from the BIOS up to the browser. Whether it's undervolting hardware for thermal efficiency or refactoring backend logic for millisecond gains, I thrive on squeezing every bit of performance out of the technology I build.
 
-## About Me
+---
 
-I’m a full stack developer who enjoys building systems that actually hold up beyond the demo stage. Most of my work focuses on connecting clean frontends with practical backend logic-handling real data, managing edge cases, and keeping things fast and reliable.
+## 🏆 Featured Highlights
 
-At BCIT, I’ve been developing applications using React, Node.js, and both SQL and NoSQL databases, while paying close attention to performance, structure, and maintainability. I’ve worked on projects involving authentication flows, API design, and even integrating local AI models into real-time environments like Discord.
+* **GitScribe (Hack the Break 2026):** Placed **Top 6 out of 36 teams**. Built an AI-powered commit-message tool for developers.
+* **Discord-AI-Bridge:** Bridged Discord to **Local LLMs** (LM Studio) for private, high-performance AI inference.
+* **Jeddit:** Designed and built a full-stack social platform featuring nested threading and custom voting logic.
 
-I tend to approach projects from a systems perspective-thinking about how pieces interact, where things can break, and how to keep the experience smooth for users. I value clear structure, efficient code, and building things that are simple, but not simplistic.
+---
 
-Currently focused on building more complex full-stack systems and exploring performance, scalability, and real-world application design.
+## 🛠️ Tech Stack & Environment
 
-## Projects
-This portfolio includes a range of projects demonstrating:
-- Full-stack web applications
-- Responsive UI/UX design
-- API integration and data handling
-- Clean component-based architecture
+| Domain | Tools & Technologies |
+| :--- | :--- |
+| **Frontend** | React, TypeScript, Tailwind CSS, Figma |
+| **Backend** | Node.js, Express, Drizzle ORM, MySQL, PostgreSQL, MongoDB |
+| **Integrations** | Discord.py, REST APIs, Auth0, LM Studio |
+| **Environment** | Windows 11 Pro | VS Code | Fira Code |
+
+## 📫 Let's Connect
+[**LinkedIn**](https://www.linkedin.com/in/shervin-babaei-5a326a388/)
