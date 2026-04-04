@@ -1,0 +1,9 @@
+# Dependency folders
+node_modules/
+
+# Windows system files
+Thumbs.db
+desktop.ini
+
+# Logs
+npm-debug.log*
