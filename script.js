@@ -1,7 +1,3 @@
-import { injectSpeedInsights } from "@vercel/speed-insights";
-
-injectSpeedInsights();
-
 const projects = [
   {
     name: "GitScribe",
