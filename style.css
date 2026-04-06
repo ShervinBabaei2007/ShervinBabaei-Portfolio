@@ -10,16 +10,16 @@
 }
 
 :root {
-  --bg: #0f0e0d;
-  --bg-2: #171614;
-  --bg-card: #1c1a17;
-  --border: #2e2b26;
-  --text: #e8e2d9;
-  --text-muted: #857e74;
-  --accent: #d4a853;
-  --accent-dim: #a07c35;
-  --tag-bg: #242018;
-  --tag-text: #c8a96e;
+  --bg: #0d0c0b;
+  --bg-2: #141312;
+  --bg-card: #1c1a19;
+  --border: #33302e;
+  --text: #f5f2ed;
+  --text-muted: #a8a298;
+  --accent: #e5b96a;
+  --accent-dim: #967948;
+  --tag-bg: #292622;
+  --tag-text: #dec08a;
 
   --font-display: "Playfair Display", Georgia, serif;
   --font-mono: "DM Mono", monospace;
@@ -39,7 +39,7 @@ body {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.7;
-  font-weight: 300;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -89,7 +89,7 @@ a {
 
 .nav-links a {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   letter-spacing: 0.1em;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -147,7 +147,7 @@ a {
 
 .hero-label {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--accent);
@@ -231,7 +231,7 @@ a {
 .btn {
   display: inline-block;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--bg);
@@ -256,7 +256,7 @@ a {
    ===================== */
 .section-label {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--accent);
@@ -318,7 +318,7 @@ a {
 
 .about-stack span {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   letter-spacing: 0.1em;
   color: var(--tag-text);
   background: var(--tag-bg);
@@ -396,8 +396,8 @@ a {
 
 .project-num {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  color: var(--text-muted);
+  font-size: 1rem;
+  color: var(--text);
   letter-spacing: 0.12em;
   opacity: 0.5;
 }
@@ -425,7 +425,7 @@ a {
 
 .project-tags span {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   letter-spacing: 0.08em;
   color: var(--tag-text);
   background: var(--tag-bg);
@@ -501,7 +501,7 @@ a {
 
 .contact-link-label {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -528,7 +528,7 @@ a {
   padding: 1.8rem 3rem;
   border-top: 1px solid var(--border);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
   letter-spacing: 0.08em;
 }
