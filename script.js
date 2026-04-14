@@ -24,19 +24,19 @@ const projects = [
   //   tags: ["TanStack", "Drizzle ORM", "PostgreSQL", "Better Auth"],
   // },
   {
-    name: "Mood Jorts",
+    name: "Mood Pinterest Clone",
     folder: "moodjorts",
     desc: "A vanilla JS mood board SPA. Cards are resizable, reorderable, and persist via localStorage. Includes undo/redo, drag-and-drop, and keyboard navigation.",
     tags: ["HTML", "CSS", "JavaScript", "localStorage"],
   },
   {
-    name: "Jeddit",
+    name: "Reddit Clone",
     folder: "jeddit",
     desc: "A Tiny-Reddit-like web app with voting, custom ordering, moderator management, and nested comments. Built with Node.js, Express, and EJS.",
     tags: ["Node.js", "Express", "EJS", "JavaScript"],
   },
   {
-    name: "Jiki",
+    name: "Wiki Clone",
     folder: "mini-wiki",
     desc: "A mini Wikipedia-style web app built with Node.js and Express. Features auto-linkification between articles, EJS-rendered pages, and a flat-file data store.",
     tags: ["Node.js", "Express", "EJS", "JavaScript"],
