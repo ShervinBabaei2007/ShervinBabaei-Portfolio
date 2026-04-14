@@ -24,7 +24,7 @@ const projects = [
   //   tags: ["TanStack", "Drizzle ORM", "PostgreSQL", "Better Auth"],
   // },
   {
-    name: "Mood Pinterest Clone",
+    name: "Pinterest Clone",
     folder: "moodjorts",
     desc: "A vanilla JS mood board SPA. Cards are resizable, reorderable, and persist via localStorage. Includes undo/redo, drag-and-drop, and keyboard navigation.",
     tags: ["HTML", "CSS", "JavaScript", "localStorage"],
